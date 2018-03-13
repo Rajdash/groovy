@@ -1,8 +1,9 @@
 @Library('groovy@master')
 def url = 'https://github.com/Rajdash/groovy.git'
+def branch = 'master'
 node() {
     stage ("Preparation-Build"){
-    com.raj.checkout url: url
+    checkout url: url , branch: branch
     mvnBuild()
     }
     stage ('deploy'){
