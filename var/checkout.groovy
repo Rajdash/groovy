@@ -2,6 +2,6 @@
 package com.raj
 def call(LinkedHashMap options) {
 
-    git url: url
+    git url: url , branch: 'master'
 
 }
