@@ -1,5 +1,4 @@
 #!/usr/bin/groovy
-package com.raj
 
 /**
  * An opiniated git checkout with default values for branch and credentialsId
@@ -13,7 +12,7 @@ def call(LinkedHashMap options) {
 
     //Optional options
     def gitSshCredential  = options.get("gitSshCredential") ?: credential.gitSsh
-    def branch            = options.get("branch") ?: "develop"
+    def branch            = options.get("branch") ?: "master"
 
     println("Executing ${this.getClass().getSimpleName()} with options ${options}")
 

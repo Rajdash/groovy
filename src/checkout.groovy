@@ -13,7 +13,7 @@ def call(LinkedHashMap options) {
 
     //Optional options
     def gitSshCredential  = options.get("gitSshCredential") ?: credential.gitSsh
-    def branch            = options.get("branch") ?: "develop"
+    def branch            = options.get("branch") ?: "master"
 
     println("Executing ${this.getClass().getSimpleName()} with options ${options}")
 
