@@ -3,7 +3,7 @@ def url = 'https://github.com/Rajdash/groovy.git'
 def branch = 'master'
 node() {
     stage ("Preparation-Build"){
-    checkout url: url , branch: branch
+    checkout url: url
     mvnBuild()
     }
     stage ('deploy'){
